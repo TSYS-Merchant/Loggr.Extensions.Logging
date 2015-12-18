@@ -8,8 +8,8 @@
       <dependency id="Microsoft.Extensions.Logging" version="1.0.0-rc1-final" />
       <dependency id="loggr-dotnet" version="1.0.9" />
     </dependencies>
-    <id>Loggr.Framework.Logging</id>
-    <title>Loggr.Framework.Logging</title>
+    <id>Loggr.Extensions.Logging</id>
+    <title>Loggr.Extensions.Logging</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Loggr provider for Microsoft.Extensions.Logging</description>
     <projectUrl>https://github.com/imobile3/Loggr.Extensions.Logging</projectUrl>
