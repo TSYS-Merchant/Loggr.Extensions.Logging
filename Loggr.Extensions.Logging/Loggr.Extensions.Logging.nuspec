@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>$version$-rc1-final</version>
+    <authors>iMobile3</authors>
+    <owners>Matt Bishop</owners>
+    <dependencies>
+      <dependency id="Microsoft.Extensions.Logging" version="1.0.0-rc1-final" />
+      <dependency id="loggr-dotnet" version="1.0.9" />
+    </dependencies>
+    <id>Loggr.Framework.Logging</id>
+    <title>Loggr.Framework.Logging</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Loggr provider for Microsoft.Extensions.Logging</description>
+    <projectUrl>https://github.com/imobile3/Loggr.Extensions.Logging</projectUrl>
+    <iconUrl>http://static.loggr.net/1/images/nuget/logo.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loggr.Extensions.Logging", "Loggr.Extensions.Logging\Loggr.Extensions.Logging.csproj", "{F652DD68-9FB2-4E65-836D-AC0E498A8AB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loggr.Extensions.Logging.Console", "Loggr.Extensions.Logging.Console\Loggr.Extensions.Logging.Console.csproj", "{E0F88D6B-D4AD-4882-A7F9-42BA77A37FAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F652DD68-9FB2-4E65-836D-AC0E498A8AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F652DD68-9FB2-4E65-836D-AC0E498A8AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F652DD68-9FB2-4E65-836D-AC0E498A8AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F652DD68-9FB2-4E65-836D-AC0E498A8AB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0F88D6B-D4AD-4882-A7F9-42BA77A37FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0F88D6B-D4AD-4882-A7F9-42BA77A37FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0F88D6B-D4AD-4882-A7F9-42BA77A37FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0F88D6B-D4AD-4882-A7F9-42BA77A37FAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
