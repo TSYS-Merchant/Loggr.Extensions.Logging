@@ -9,7 +9,7 @@ namespace Loggr.Extensions.Logging.Console
         {
             var factory = new LoggerFactory();
             var logger = factory.CreateLogger( "MyLog" );
-            factory.AddLoggr();
+            factory.AddLoggr( "logKey", "apikey" );
 
             logger.LogCritical( "This is critical", new Exception( "Critical stuff going down" ) );
             logger.LogError( "This is an error", new Exception( "Erroneous stuff all over the place" ) );

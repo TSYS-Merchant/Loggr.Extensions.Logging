@@ -1,0 +1,28 @@
+{
+    "version": "1.0.0-rc1-final-*",
+    "description": "Loggr.Extensions.Logging console application",
+    "authors": [ "mbishopim3" ],
+    "tags": [ "" ],
+    "projectUrl": "https://github.com/imobile3/Loggr.Extensions.Logging",
+    "licenseUrl": "",
+
+    "compilationOptions": {
+        "emitEntryPoint": true
+    },
+
+    "dependencies": {
+        "Loggr.Extensions.Logging": "1.0.0-rc1-final-*"
+    },
+
+    "commands": {
+        "Loggr.Extensions.Logging.Console": "Loggr.Extensions.Logging.Console"
+    },
+
+    "frameworks": {
+        "dnx451": {
+            "frameworkAssemblies": {
+                "System.Runtime": ""
+            }
+        }
+    }
+}

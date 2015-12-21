@@ -1,0 +1,18 @@
+{
+    "version": "1.0.0-rc1-final-*",
+    "description": "Loggr provider for Microsoft.Extensions.Logging",
+    "authors": [ "mbishopim3" ],
+    "tags": [ "loggr dnx" ],
+    "projectUrl": "https://github.com/imobile3/Loggr.Extensions.Logging",
+    "licenseUrl": "",
+    "frameworks": {
+        "dnx451": {
+            "frameworkAssemblies": {
+                "System.Runtime": ""
+            }
+        }
+    },
+    "dependencies": {
+        "Microsoft.Extensions.Logging": "1.0.0-rc1-final"
+    }
+}
