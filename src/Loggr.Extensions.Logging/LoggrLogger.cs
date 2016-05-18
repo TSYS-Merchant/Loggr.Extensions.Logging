@@ -5,7 +5,7 @@ namespace Loggr.Extensions.Logging
 {
     public class LoggrLogger : ILogger
     {
-        private readonly Func<string, LogLevel, int, bool> m_filter;
+        private readonly Func<string, LogLevel, EventId, bool> m_filter;
         private readonly string m_name;
         private readonly LogClient m_client;
         private readonly string m_source;
@@ -14,7 +14,7 @@ namespace Loggr.Extensions.Logging
             : this( client, name, source, null )
         { }
 
-        public LoggrLogger( LogClient client, string name, string source, Func<string, LogLevel, int, bool> filter )
+        public LoggrLogger( LogClient client, string name, string source, Func<string, LogLevel, EventId, bool> filter )
         {
             m_client = client;
             m_name = name;
@@ -22,7 +22,7 @@ namespace Loggr.Extensions.Logging
             m_filter = filter;
         }
 
-        public IDisposable BeginScopeImpl( object state )
+        public IDisposable BeginScope<TState>( TState state )
         {
             return null;
         }
@@ -32,12 +32,12 @@ namespace Loggr.Extensions.Logging
             return true;
         }
 
-        public bool IsEnabled( LogLevel logLevel, int eventId )
+        public bool IsEnabled( LogLevel logLevel, EventId eventId )
         {
             return m_filter == null || m_filter( m_name, logLevel, eventId );
         }
 
-        public void Log( LogLevel logLevel, int eventId, object state, Exception exception, Func<object, Exception, string> formatter )
+        public void Log<TState>( LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter )
         {
             if( !IsEnabled( logLevel, eventId ) )
             {
@@ -49,21 +49,12 @@ namespace Loggr.Extensions.Logging
                 return;
             }
 
-            var values = state as ILogValues;
-            string message;
+            if( formatter == null )
+            {
+                throw new ArgumentNullException( nameof( formatter ) );
+            }
 
-            if( formatter != null )
-            {
-                message = formatter( state, null );
-            }
-            else if( values != null )
-            {
-                message = LogFormatter.FormatLogValues( values );
-            }
-            else
-            {
-                message = LogFormatter.Formatter( state, null );
-            }
+            var message = formatter( state, exception );
 
             if( string.IsNullOrWhiteSpace( message ) )
             {
@@ -108,8 +99,8 @@ namespace Loggr.Extensions.Logging
         {
             switch( logLevel )
             {
-                case LogLevel.Verbose:
-                    return "verbose";
+                case LogLevel.Trace:
+                    return "trace";
                 case LogLevel.Debug:
                     return "debug";
                 case LogLevel.Information:

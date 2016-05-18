@@ -1,20 +1,28 @@
 {
-    "version": "1.0.1-rc1-final-*",
+    "version": "1.0.0-rc2-final",
     "title": "Loggr.Extensions.Logging",
     "description": "Loggr provider for Microsoft.Extensions.Logging",
     "authors": [ "mbishopim3" ],
-    "tags": [ "loggr dnx" ],
-    "projectUrl": "https://github.com/imobile3/Loggr.Extensions.Logging",
-    "iconUrl": "http://static.loggr.net/1/images/nuget/logo.png",
     "copyright": "2015 iMobile3, LLC",
+    "packOptions": {
+        "tags": [ "loggr" ],
+        "projectUrl": "https://github.com/imobile3/Loggr.Extensions.Logging",
+        "iconUrl": "http://static.loggr.net/1/images/nuget/logo.png"
+    },
     "frameworks": {
-        "dnx451": {
+        "netframework451": {
+            "imports": [ "dnx451" ],
             "frameworkAssemblies": {
                 "System.Runtime": ""
             }
         }
     },
     "dependencies": {
-        "Microsoft.Extensions.Logging": "1.0.0-rc1-final"
+        "Microsoft.Extensions.Logging": "1.0.0-rc2-final"
+    },
+
+    "runtimeOptions": {
+        "gcServer": false,
+        "gcConcurrent": true
     }
 }
