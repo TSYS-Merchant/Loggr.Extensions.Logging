@@ -8,7 +8,7 @@ Log to [Loggr][0] from [Microsoft.Extensions.Logging][1].
 Installation
 ------------
 
-Loggr.Extensions.Logging installs through [NuGet][4]:
+Loggr.Extensions.Logging installs through [NuGet][3]:
 
 ```
 PS> Install-Package Loggr.Extensions.Logging
@@ -66,4 +66,4 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [0]: http://loggr.net/
 [1]: https://github.com/aspnet/Logging
 [2]: https://github.com/loggr/loggr-dotnet
-[4]: https://www.nuget.org/packages/Loggr.Extensions.Logging
+[3]: https://www.nuget.org/packages/Loggr.Extensions.Logging
