@@ -1,28 +1,32 @@
 {
-    "version": "1.0.0-rc1-final-*",
+    "version": "1.0.0-rc2-final",
     "description": "Loggr.Extensions.Logging console application",
     "authors": [ "mbishopim3" ],
-    "tags": [ "" ],
-    "projectUrl": "https://github.com/imobile3/Loggr.Extensions.Logging",
-    "licenseUrl": "",
-
-    "compilationOptions": {
-        "emitEntryPoint": true
+    "packOptions": {
+        "tags": [ "loggr" ],
+        "projectUrl": "https://github.com/imobile3/Loggr.Extensions.Logging",
+        "iconUrl": "http://static.loggr.net/1/images/nuget/logo.png"
     },
 
     "dependencies": {
-        "Loggr.Extensions.Logging": "1.0.0-rc1-final-*"
-    },
-
-    "commands": {
-        "Loggr.Extensions.Logging.Console": "Loggr.Extensions.Logging.Console"
+        "Loggr.Extensions.Logging": "1.0.0-rc2-final"
     },
 
     "frameworks": {
-        "dnx451": {
+        "netframework451": {
+            "imports": [ "dnx451" ],
             "frameworkAssemblies": {
                 "System.Runtime": ""
             }
         }
+    },
+
+    "runtimeOptions": {
+        "gcServer": false,
+        "gcConcurrent": true
+    },
+
+    "buildOptions": {
+        "emitEntryPoint": true
     }
 }

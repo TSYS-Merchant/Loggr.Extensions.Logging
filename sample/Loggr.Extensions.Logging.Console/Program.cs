@@ -14,10 +14,10 @@ namespace Loggr.Extensions.Logging.Console
             logger.LogCritical( "This is critical", new Exception( "Critical stuff going down" ) );
             logger.LogError( "This is an error", new Exception( "Erroneous stuff all over the place" ) );
             logger.LogInformation( "This is information" );
-            logger.LogVerbose( "This is verbose" );
+            logger.LogTrace( "This is trace" );
             logger.LogWarning( "This is a warning" );
 
-            using( logger.BeginScopeImpl( "Main" ) )
+            using( logger.BeginScope( "Main" ) )
             {
                 logger.LogInformation( "This is information in scope" );
             }

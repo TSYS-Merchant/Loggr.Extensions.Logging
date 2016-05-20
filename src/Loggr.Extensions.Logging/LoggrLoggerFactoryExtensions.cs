@@ -10,7 +10,7 @@ namespace Loggr.Extensions.Logging
             return AddLoggr( factory, LogLevel.Information, logKey, apiKey, source );
         }
 
-        public static ILoggerFactory AddLoggr( this ILoggerFactory factory, Func<string, LogLevel, int, bool> filter, string logKey, string apiKey, string source = null )
+        public static ILoggerFactory AddLoggr( this ILoggerFactory factory, Func<string, LogLevel, EventId, bool> filter, string logKey, string apiKey, string source = null )
         {
             factory.AddProvider( new LoggrLoggerProvider( filter, logKey, apiKey, source ) );
             return factory;
