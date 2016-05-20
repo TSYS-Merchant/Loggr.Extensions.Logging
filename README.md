@@ -8,7 +8,7 @@ Log to [Loggr][0] from [Microsoft.Extensions.Logging][1].
 Installation
 ------------
 
-Loggr.Extensions.Logging installs through NuGet:
+Loggr.Extensions.Logging installs through [NuGet][4]:
 
 ```
 PS> Install-Package Loggr.Extensions.Logging
@@ -33,7 +33,7 @@ Log messages to Loggr, just as with every other provider:
 logger.LogInformation( "This is information" );
 ```
 
-This library currently uses the [loggr-dotnet][2] source directly since their NuGet package doesn't support DNX.
+This library currently uses the [loggr-dotnet][2] source directly since their NuGet package doesn't support .NET Core.
 
 License / Support
 =================
@@ -66,3 +66,4 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [0]: http://loggr.net/
 [1]: https://github.com/aspnet/Logging
 [2]: https://github.com/loggr/loggr-dotnet
+[4]: https://www.nuget.org/packages/Loggr.Extensions.Logging
