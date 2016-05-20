@@ -3,7 +3,7 @@
     "title": "Loggr.Extensions.Logging",
     "description": "Loggr provider for Microsoft.Extensions.Logging",
     "authors": [ "mbishopim3" ],
-    "copyright": "2015 iMobile3, LLC",
+    "copyright": "2016 iMobile3, LLC",
     "packOptions": {
         "tags": [ "loggr" ],
         "projectUrl": "https://github.com/imobile3/Loggr.Extensions.Logging",
