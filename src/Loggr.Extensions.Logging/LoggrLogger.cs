@@ -71,7 +71,7 @@ namespace Loggr.Extensions.Logging
             var logEvent = Events.Create()
                 .UseLogClient( m_client )
                 .Text( text )
-                .Tags( new[] { GetLogLevel( logLevel ), eventId.ToString() } )
+                .Tags( new[] { GetLogLevel( logLevel ) } )
                 .Source( m_source ?? m_name )
                 .Timestamp( DateTime.UtcNow )
                 .DataType( DataType.html );

@@ -161,7 +161,7 @@ namespace Loggr
         {
             // make sure our event has at least a text field
             if (string.IsNullOrEmpty(eventObj.Text))
-                throw new ApplicationException("Event cannot have an empty Text field");
+                throw new Exception("Event cannot have an empty Text field");
 
             // modify event based on configuration
             MergeConfigurationWithEvent(eventObj);

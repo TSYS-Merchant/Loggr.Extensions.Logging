@@ -1,28 +1,26 @@
 ﻿using System;
-using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace Loggr
 {
     internal class HttpClient : IHttpClient
     {
-        public byte[] PostData(string url, string data)
+        private System.Net.Http.HttpClient _cli;
+
+        public HttpClient()
         {
-            NoKeepAliveClient cli = new NoKeepAliveClient();
-            cli.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
-            return cli.UploadData(new Uri(url), "POST", System.Text.Encoding.ASCII.GetBytes(data));
+            _cli = new System.Net.Http.HttpClient();
         }
 
-        class NoKeepAliveClient : WebClient
+        public byte[] PostData(string url, string data)
         {
-            protected override WebRequest GetWebRequest(System.Uri address)
-            {
-                WebRequest req = base.GetWebRequest(address);
-                if (req is HttpWebRequest)
-                {
-                    ((HttpWebRequest)req).KeepAlive = false;
-                }
-                return req;
-            }
+            HttpContent content = new ByteArrayContent(System.Text.Encoding.ASCII.GetBytes(data));
+            content.Headers.Add("Keep-Alive", "false");
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
+
+            var response = _cli.PostAsync(new Uri(url), content).GetAwaiter().GetResult();
+            return response.Content.ReadAsByteArrayAsync().GetAwaiter().GetResult();
         }
     }
 }

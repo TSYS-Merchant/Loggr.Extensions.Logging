@@ -122,7 +122,7 @@ namespace Loggr.Utility
                             Write(m.Name);
                             Write("=");
                             Type t = f != null ? f.FieldType : p.PropertyType;
-                            if (t.IsValueType || object.ReferenceEquals(t, typeof(string)))
+                            if (t.GetTypeInfo().IsValueType || object.ReferenceEquals(t, typeof(string)))
                             {
                                 try
                                 {
@@ -161,7 +161,7 @@ namespace Loggr.Utility
                             if (f != null || p != null)
                             {
                                 Type t = f != null ? f.FieldType : p.PropertyType;
-                                if (!(t.IsValueType || object.ReferenceEquals(t, typeof(string))))
+                                if (!(t.GetTypeInfo().IsValueType || object.ReferenceEquals(t, typeof(string))))
                                 {
                                     object value = f != null ? f.GetValue(element) : p.GetValue(element, null);
                                     if (value != null)
@@ -186,7 +186,7 @@ namespace Loggr.Utility
             }
             else if (o is DateTime)
             {
-                Write(((DateTime)o).ToShortDateString());
+                Write(((DateTime)o).ToString());
             }
             else if (o is ValueType || o is string)
             {
