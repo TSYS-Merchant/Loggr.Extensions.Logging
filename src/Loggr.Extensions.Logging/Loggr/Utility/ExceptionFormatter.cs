@@ -30,7 +30,7 @@ namespace Loggr.Utility
             {
                 int suffixIndex = type.Length - conventionalSuffix.Length;
 
-                if (string.Compare(type, suffixIndex, conventionalSuffix, 0, conventionalSuffix.Length, true, CultureInfo.InvariantCulture) == 0)
+                if (string.Compare(type, suffixIndex, conventionalSuffix, 0, conventionalSuffix.Length) == 0)
                 {
                     type = type.Substring(0, suffixIndex);
                 }

@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0-rc2-final",
+  "version": "1.0.0",
     "description": "Loggr.Extensions.Logging console application",
     "authors": [ "mbishopim3" ],
     "packOptions": {
@@ -9,7 +9,7 @@
     },
 
     "dependencies": {
-        "Loggr.Extensions.Logging": "1.0.0-rc2-final"
+        "Loggr.Extensions.Logging": "1.0.0"
     },
 
     "frameworks": {
@@ -17,6 +17,15 @@
             "imports": [ "dnx451" ],
             "frameworkAssemblies": {
                 "System.Runtime": ""
+            }
+        },
+        "netcoreapp1.0": {
+            "imports": [ "dnxcore50" ],
+            "dependencies": {
+                "Microsoft.NETCore.App": {
+                    "type": "platform",
+                    "version": "1.0.0"
+                }
             }
         }
     },
