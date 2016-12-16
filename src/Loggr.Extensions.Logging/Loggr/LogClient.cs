@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Loggr
 {
@@ -141,8 +142,6 @@ namespace Loggr
 
         #region Post
 
-        private delegate void PostEventDelegate(Event eventObj);
-
         /// <summary>
         /// Posts the specified event to Loggr (posts asynchronously)
         /// </summary>
@@ -169,10 +168,14 @@ namespace Loggr
             // post async or sync
             if (async)
             {
-                PostEventDelegate del = new PostEventDelegate(PostEventBase);
-                del.BeginInvoke(eventObj, null, null);
+                PostEventBaseAsync(eventObj);
             }
             else PostEventBase(eventObj);
+        }
+
+        protected async void PostEventBaseAsync(Event eventObj)
+        {
+            await Task.Run(() => { PostEventBase(eventObj); });
         }
 
         [DebuggerNonUserCode()]
