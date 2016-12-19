@@ -1,7 +1,7 @@
 Loggr.Extensions.Logging
 =======================
 
-[![Build status](https://ci.appveyor.com/api/projects/status/l3snx3wl42pluf8p/branch/master?svg=true)](https://ci.appveyor.com/project/iMobile3/loggr-framework-logging/branch/master) [![NuGet Version](http://img.shields.io/nuget/v/Loggr.Extensions.Logging.svg?style=flat)](https://www.nuget.org/packages/Loggr.Extensions.Logging/)
+[![Build status](https://ci.appveyor.com/api/projects/status/e4s6reeh69qf580p/branch/master?svg=true)](https://ci.appveyor.com/project/iMobile3/loggr-extensions-logging/branch/master) [![NuGet Version](http://img.shields.io/nuget/v/Loggr.Extensions.Logging.svg?style=flat)](https://www.nuget.org/packages/Loggr.Extensions.Logging/)
 
 Log to [Loggr][0] from [Microsoft.Extensions.Logging][1].
 
