@@ -1,6 +1,6 @@
 {
   "project_id" : "Loggr Framework",
-  "conduit_uri" : "https://devportal.imobile3.com/",
+  "conduit_uri" : "https://phab.imobile3.local/",
   "phutil_libraries" : [
     "../cassowary/libcassowary/src"
   ],
